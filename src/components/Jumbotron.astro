@@ -1,0 +1,23 @@
+---
+import Counter from "./Counter.astro"
+import {Content as SobreMi} from '../copywriting/Placeholder.md';
+---
+
+<div class="w-2/4 xs:w-2/4 flex p-6 m-14 jumbo justify-center flex-wrap rounded-xl">
+  <div class="basis-full justify-center flex">
+    <img src="yo.jpeg" class="rounded-xl w-32 h-32 max-w-32" alt="Imagen Personal"/>
+  </div>
+  <SobreMi/>
+</div>
+
+<style>
+  h1 {
+    font-size: 2em !important;
+    font-weight: bold !important;
+  }
+  .jumbo {
+    background-color: var(--back-color);
+    color: var(--terciary-color);
+    font-family: 'Consolas', sans-serif;
+  }
+</style>

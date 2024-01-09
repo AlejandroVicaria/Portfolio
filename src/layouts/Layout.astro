@@ -1,0 +1,48 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="title" content={title}>
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="flex justify-center w-screen h-screen">
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--back-color: #251520;
+		--primary-color: #607744;
+		--secondary-color: #B3B6B7;
+		--terciary-color: #B5F44A;
+	}
+	body {
+		background-color: #110a0f;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+
+	@font-face {
+		font-family: 'Consolas';
+		src: url('/fonts/Consolas.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	h1 {
+		font-size: 2em !important;
+		font-weight: bold !important;
+	}
+
+</style>
